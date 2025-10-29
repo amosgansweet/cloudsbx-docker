@@ -19,7 +19,31 @@ docker run -d \
   -e ARGO=yes \
   amosgansweet/cloudsbx:latest
 ---
-### 若环境变量指定了协议端口或参数(环境变量用统一大写字母或小写字母，如果不统一，小写为主，大写失效-原码是小写），导入（仅保留了vless-reality,如果VLPT未填写端口，则随机一个，继续部署。其它协议端口可以自行在环境变量中添加）
+
+### 若环境变量指定了协议端口或参数(环境变量用统一小写字母-原码是小写），导入（仅保留了vless-reality,端口VLPT必须大写有效。如果未填写端口，则随机一个，便于继续部署。其它协议端口可以自行在环境变量中添加）
+
+---
+| Bash 变量名 | Compose/平台环境变量 | 说明               |
+| -------- | -------------- | ---------------- |
+| vlpt     | `VLPT`         | VLESS reality 端口 |
+| vmpt     | `VMPT`         | VMess WS 端口      |
+| hypt     | `HYPT`         | Hysteria2 端口     |
+| tupt     | `TUPT`         | Trojan UDP 端口    |
+| xhpt     | `XHPT`         | Xray H2 端口       |
+| vxpt     | `VXPT`         | VLESS WS 端口      |
+| anpt     | `ANPT`         | Anycast Node 端口  |
+| arpt     | `ARPT`         | Argo Remote 端口   |
+| sspt     | `SSPT`         | Shadowsocks 端口   |
+| sopt     | `SOPT`         | SOCKS5 端口        |
+| reym     | `REYM`         | VLESS reality 域名 |
+| cdnym    | `CDNYM`        | CDN 域名           |
+| argo     | `ARGO`         | 是否启用 Argo Tunnel |
+| agn      | `ARGO_DOMAIN`  | Argo 域名          |
+| agk      | `ARGO_AUTH`    | Argo Token       |
+| ippz     | `IPPZ`         | IP 设置            |
+| warp     | `WARP`         | 是否启用 Warp        |
+| name     | `NAME`         | 容器名称或标识          |
+
 ```
 | 环境变量          | 说明                      |
 | ------------- | ----------------------- |
@@ -58,27 +82,6 @@ docker run -d \
 | 19、添加所有节点名称前缀 | name | 任意字符 | 默认协议名前缀 | 默认协议名前缀 | 可选 |
 | 20、【仅容器类docker】监听端口，网页查询 | PORT | 端口指定 | 3000 | 3000 | 可选 |
 | 21、【仅容器类docker】启用vless-ws-tls | DOMAIN | 服务器域名 | 关闭vless-ws-tls | 关闭vless-ws-tls | 可选，vless-ws-tls可独立存在，uuid变量必须启用 |
----
-| Bash 变量名 | Compose/平台环境变量 | 说明               |
-| -------- | -------------- | ---------------- |
-| vlpt     | `VLPT`         | VLESS reality 端口 |
-| vmpt     | `VMPT`         | VMess WS 端口      |
-| hypt     | `HYPT`         | Hysteria2 端口     |
-| tupt     | `TUPT`         | Trojan UDP 端口    |
-| xhpt     | `XHPT`         | Xray H2 端口       |
-| vxpt     | `VXPT`         | VLESS WS 端口      |
-| anpt     | `ANPT`         | Anycast Node 端口  |
-| arpt     | `ARPT`         | Argo Remote 端口   |
-| sspt     | `SSPT`         | Shadowsocks 端口   |
-| sopt     | `SOPT`         | SOCKS5 端口        |
-| reym     | `REYM`         | VLESS reality 域名 |
-| cdnym    | `CDNYM`        | CDN 域名           |
-| argo     | `ARGO`         | 是否启用 Argo Tunnel |
-| agn      | `ARGO_DOMAIN`  | Argo 域名          |
-| agk      | `ARGO_AUTH`    | Argo Token       |
-| ippz     | `IPPZ`         | IP 设置            |
-| warp     | `WARP`         | 是否启用 Warp        |
-| name     | `NAME`         | 容器名称或标识          |
 
 
 ---
