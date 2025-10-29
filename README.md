@@ -18,7 +18,7 @@ docker run -d \
   -e WARP=yes \
   -e ARGO=yes \
   amosgansweet/cloudsbx:latest
-------------------------------------------
+
 ```
 | 环境变量          | 说明                      |
 | ------------- | ----------------------- |
