@@ -18,6 +18,7 @@ docker run -d \
   -e WARP=yes \
   -e ARGO=yes \
   amosgansweet/cloudsbx:latest
+```
 
 
 ### 若环境变量指定了协议端口或参数(环境变量用统一小写字母-原码是小写），导入（仅保留了vless-reality,端口VLPT必须大写有效。如果未填写端口，则随机一个，便于继续部署。其它协议端口可以自行在环境变量中添加）
