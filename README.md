@@ -32,10 +32,11 @@ docker run -d \
 | `ARGO_AUTH`   | 固定 Argo Token（可选）       |
 ```
 -------------------------------------------------
-```
+
 📂 数据持久化
 
 容器中生成的配置与密钥均在 /root/agsbx 下，可挂载到宿主机：
+```
 yaml
 volumes:
   - ./data:/root/agsbx
