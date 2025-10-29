@@ -30,7 +30,7 @@ docker run -d \
 | `ARGO`        | 是否启用 Cloudflare Argo 隧道 |
 | `ARGO_DOMAIN` | 固定 Argo 隧道域名（可选）        |
 | `ARGO_AUTH`   | 固定 Argo Token（可选）       |
-```
+
 -------------------------------------------------
 
 📂 数据持久化
@@ -39,14 +39,7 @@ docker run -d \
 ```
 yaml
 volumes:
-  - ./data:/root/agsbx
-```
-
-
-
-
-
-
+   ./data:/root/agsbx
 
 
 
