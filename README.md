@@ -18,3 +18,35 @@ docker run -d \
   -e WARP=yes \
   -e ARGO=yes \
   amosgansweet/cloudsbx:latest
+------------------------------------------
+```
+| 环境变量          | 说明                      |
+| ------------- | ----------------------- |
+| `VLPT`        | Vless TCP Reality 端口    |
+| `VMPT`        | Vmess WS 端口             |
+| `HYPT`        | Hysteria2 端口            |
+| `TUPT`        | Tuic 端口                 |
+| `WARP`        | 是否启用 Warp（yes/no）       |
+| `ARGO`        | 是否启用 Cloudflare Argo 隧道 |
+| `ARGO_DOMAIN` | 固定 Argo 隧道域名（可选）        |
+| `ARGO_AUTH`   | 固定 Argo Token（可选）       |
+```
+-------------------------------------------------
+```
+📂 数据持久化
+
+容器中生成的配置与密钥均在 /root/agsbx 下，可挂载到宿主机：
+`
+volumes:
+  - ./data:/root/agsbx
+`
+```
+
+
+
+
+
+
+
+
+
