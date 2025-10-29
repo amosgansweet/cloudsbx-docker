@@ -11,5 +11,5 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: Build and Push
         run: |
-          docker build -t ghcr.io/${{ github.actor }}/cloudsbx:latest .
-          docker push ghcr.io/${{ github.actor }}/cloudsbx:latest
+          docker build -t ghcr.io/${{ github.actor }}/cloudsbx-docker:latest .
+          docker push ghcr.io/${{ github.actor }}/cloudsbx-docker:latest
